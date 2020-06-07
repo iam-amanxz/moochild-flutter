@@ -37,33 +37,52 @@ class _SBLeaderboardState extends State<SBLeaderboard> {
   Widget build(BuildContext context) {
     return flag == false
         ? Loading()
-        : Scaffold(
-            body: SafeArea(
-              child: Column(
-                children: <Widget>[
-                  Expanded(
-                    flex: 1,
-                    child: Container(
-                      padding: EdgeInsets.only(top: 40.0),
-                      child: Text(
-                        'Spelling Bee Leaders',
-                        style: TextStyle(fontSize: 35.0),
-                      ),
+        : Container(
+            decoration: BoxDecoration(
+                gradient: LinearGradient(
+                    begin: Alignment.topRight,
+                    end: Alignment.bottomLeft,
+                    colors: [Color(0xFFB721FF), Color(0xFF21D4FD)])),
+            child: Scaffold(
+              backgroundColor: Colors.transparent,
+              body: SafeArea(
+                child: Padding(
+                  padding:
+                      EdgeInsets.symmetric(horizontal: 30.0, vertical: 60.0),
+                  child: Container(
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(15.0),
+                        color: Colors.white70),
+                    child: Column(
+                      children: <Widget>[
+                        Expanded(
+                          flex: 1,
+                          child: Container(
+                            padding: EdgeInsets.only(top: 40.0),
+                            child: Text(
+                              'SPELLING BEE LEADERS',
+                              style: TextStyle(
+                                  fontSize: 20.0, color: Colors.indigo),
+                            ),
+                          ),
+                        ),
+                        Expanded(
+                          flex: 6,
+                          child: Container(
+                            child: ListView.builder(
+                              itemCount: datas.length,
+                              itemBuilder: (context, index) {
+                                return UserTile(
+                                    userdata: datas[index],
+                                    dataIndex: index + 1);
+                              },
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
                   ),
-                  Expanded(
-                    flex: 5,
-                    child: Container(
-                      child: ListView.builder(
-                        itemCount: datas.length,
-                        itemBuilder: (context, index) {
-                          return UserTile(
-                              userdata: datas[index], dataIndex: index + 1);
-                        },
-                      ),
-                    ),
-                  ),
-                ],
+                ),
               ),
             ),
           );
@@ -79,20 +98,22 @@ class UserTile extends StatelessWidget {
   Widget build(BuildContext context) {
     print('userdata $userdata');
     return Padding(
-      padding: const EdgeInsets.only(top: 8.0),
+      padding: const EdgeInsets.only(top: 5.0),
       child: Card(
-        margin: EdgeInsets.fromLTRB(30.0, 5.0, 30.0, 0.0),
+        margin: EdgeInsets.fromLTRB(20.0, 5.0, 20.0, 0.0),
         child: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 15.0),
+          padding: const EdgeInsets.symmetric(vertical: 5.0),
           child: ListTile(
             leading: CircleAvatar(
               radius: 25.0,
+              backgroundColor: Colors.indigoAccent,
               child: Text(dataIndex.toString()),
             ),
             title: Text(
               userdata['sb_username'],
               textAlign: TextAlign.end,
-              style: TextStyle(fontSize: 20.0),
+              style: TextStyle(
+                  fontSize: 20.0, color: Colors.black.withOpacity(0.7)),
             ),
             subtitle: Text(
                 'Points: ${userdata['sb_points']}    Ratio: ${userdata['sb_ratio']}',
