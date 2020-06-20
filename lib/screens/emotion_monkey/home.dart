@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:moochild/screens/test_screen.dart';
 
 class EMHomePage extends StatelessWidget {
   @override
@@ -33,9 +34,9 @@ class EMHomePage extends StatelessWidget {
                     children: <Widget>[
                       InkWell(
                         onTap: () {
-                          // Navigator.of(context).push(MaterialPageRoute(
-                          //   builder: (context) => MNInitPage(),
-                          // ));
+                          Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => TestPage(),
+                          ));
                         },
                         child: Image(
                           image: AssetImage(
@@ -46,11 +47,7 @@ class EMHomePage extends StatelessWidget {
                         height: 15.0,
                       ),
                       InkWell(
-                        onTap: () {
-                          // Navigator.of(context).push(MaterialPageRoute(
-                          //   builder: (context) => MNInitPage(),
-                          // ));
-                        },
+                        onTap: () {},
                         child: Image(
                           image: AssetImage(
                               'assets/images/buttons/em_btn_challenge.png'),

@@ -17,6 +17,7 @@ class MyApp extends StatelessWidget {
       ],
       child: MaterialApp(
         title: 'Moochild Kids App',
+        debugShowCheckedModeBanner: false,
         theme: ThemeData(
           primarySwatch: Colors.indigo,
           fontFamily: 'Fredoka',

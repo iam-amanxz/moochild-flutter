@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:moochild/screens/emotion_monkey/home.dart';
 import 'package:moochild/screens/login_screen.dart';
 import 'package:moochild/screens/math_ninja/home.dart';
 import 'package:moochild/screens/spelling_bee/home.dart';
@@ -47,17 +46,17 @@ class _HomePageState extends State<HomePage> {
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
-                          GameModeCard(
-                            title: 'Emotion Monkey',
-                            description:
-                                'You think you can express your emotions flawlessly?',
-                            icon: Icons.insert_emoticon,
-                            ontap: () {
-                              Navigator.of(context).push(MaterialPageRoute(
-                                builder: (context) => EMHomePage(),
-                              ));
-                            },
-                          ),
+                          // GameModeCard(
+                          //   title: 'Emotion Monkey',
+                          //   description:
+                          //       'You think you can express your emotions flawlessly?',
+                          //   icon: Icons.insert_emoticon,
+                          //   ontap: () {
+                          //     Navigator.of(context).push(MaterialPageRoute(
+                          //       builder: (context) => EMHomePage(),
+                          //     ));
+                          //   },
+                          // ),
                           GameModeCard(
                             title: 'Math Ninja',
                             description:

@@ -16,9 +16,7 @@ class AuthService {
 
   // !Stream to notify auth changes
   Stream<User> get user {
-    return _auth.onAuthStateChanged
-        //.map((FirebaseUser user) => _userFromFirebaseUser(user));
-        .map(_userFromFirebaseUser);
+    return _auth.onAuthStateChanged.map(_userFromFirebaseUser);
   }
 
   // !Sign in with Google Account
@@ -53,6 +51,7 @@ class AuthService {
     }
   }
 
+  // !Signout
   Future signOut() async {
     try {
       return await googleSignIn.signOut();

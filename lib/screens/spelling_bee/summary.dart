@@ -54,8 +54,8 @@ class _SBSummaryPageState extends State<SBSummaryPage> {
     return StreamBuilder<SBUserGameData>(
       stream: DatabaseService(uid: user.uid).getSbUserGameData,
       builder: (context, snapshot) {
-        print(user.uid);
-        print(user.displayName);
+        // print(user.uid);
+        // print(user.displayName);
         if (snapshot.hasData) {
           SBUserGameData gamedata = snapshot.data;
           int _curgamesplayed = gamedata.sbGamesPlayed;

@@ -71,3 +71,27 @@ class GameModeCard extends StatelessWidget {
     );
   }
 }
+
+class HomeCard extends StatelessWidget {
+  final String title;
+  final String description;
+  final IconData icon;
+  final Function ontap;
+
+  HomeCard({this.title, this.description, this.icon, this.ontap});
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: 25.0, vertical: 10.0),
+      child: InkWell(
+        child: Container(
+          height: 100.0,
+          decoration: BoxDecoration(
+              borderRadius: BorderRadiusDirectional.circular(15.0),
+              color: Colors.white),
+        ),
+      ),
+    );
+  }
+}

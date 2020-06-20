@@ -48,20 +48,20 @@ class MNHomePage extends StatelessWidget {
                       SizedBox(
                         height: 15.0,
                       ),
-                      InkWell(
-                        onTap: () {
-                          // Navigator.of(context).push(MaterialPageRoute(
-                          //   builder: (context) => MNInitPage(),
-                          // ));
-                        },
-                        child: Image(
-                          image: AssetImage(
-                              'assets/images/buttons/mn_btn_challenge.png'),
-                        ),
-                      ),
-                      SizedBox(
-                        height: 15.0,
-                      ),
+                      // InkWell(
+                      //   onTap: () {
+                      //     // Navigator.of(context).push(MaterialPageRoute(
+                      //     //   builder: (context) => MNInitPage(),
+                      //     // ));
+                      //   },
+                      //   child: Image(
+                      //     image: AssetImage(
+                      //         'assets/images/buttons/mn_btn_challenge.png'),
+                      //   ),
+                      // ),
+                      // SizedBox(
+                      //   height: 15.0,
+                      // ),
                       InkWell(
                         onTap: () {
                           Navigator.of(context).push(MaterialPageRoute(

@@ -29,7 +29,7 @@ class MathNinjaService {
 
   //? Main function that generates question and answers
   dynamic generateQuestionAndAnswer(
-      List<bool> operations, int difficulty, numberofquestions) {
+      List<bool> operations, int difficulty, int numberofquestions) {
     Random r = Random();
     bool addition;
     bool subtraction;

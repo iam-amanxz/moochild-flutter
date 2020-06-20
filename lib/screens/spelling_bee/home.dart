@@ -59,20 +59,20 @@ class SBHomePage extends StatelessWidget {
                       SizedBox(
                         height: 15.0,
                       ),
-                      InkWell(
-                        // onTap: () {
-                        //   Navigator.of(context).push(MaterialPageRoute(
-                        //     builder: (context) => SBInitPage(),
-                        //   ));
-                        // },
-                        child: Image(
-                          image: AssetImage(
-                              'assets/images/buttons/sb_btn_challenge.png'),
-                        ),
-                      ),
-                      SizedBox(
-                        height: 15.0,
-                      ),
+                      // InkWell(
+                      //   // onTap: () {
+                      //   //   Navigator.of(context).push(MaterialPageRoute(
+                      //   //     builder: (context) => SBInitPage(),
+                      //   //   ));
+                      //   // },
+                      //   child: Image(
+                      //     image: AssetImage(
+                      //         'assets/images/buttons/sb_btn_challenge.png'),
+                      //   ),
+                      // ),
+                      // SizedBox(
+                      //   height: 15.0,
+                      // ),
                       InkWell(
                         onTap: () {
                           Navigator.of(context).push(MaterialPageRoute(
